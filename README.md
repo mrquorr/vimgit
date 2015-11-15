@@ -9,6 +9,7 @@ You need to have several packages installed before running script
 
 4. python `apt-get install python-dev`
 
+---
 
 After that, just run
 
@@ -20,6 +21,7 @@ Remember the existence of `vimtutor` if you don't know vim
 
 
 Tested on Debian 8
+
 Ubuntu and Mint should work as well
 
 ---
