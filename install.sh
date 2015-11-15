@@ -1,7 +1,9 @@
 #! /bin/bash
 #script for automatically installing mrquorr's vim environment
 
-#dependencies
+#dependencies and installations
+apt-get install vim
+apt-get install git
 apt-get install build-install cmake
 apt-get install python-dev
 
