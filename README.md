@@ -17,8 +17,11 @@ After that, just run
 
 2. `sudo ./install.sh`
 
+---
+
 Remember the existence of `vimtutor` if you don't know vim
 
+---
 
 Tested on Debian 8
 
