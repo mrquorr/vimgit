@@ -8,8 +8,11 @@ apt-get install python-dev
 #variables
 VUNDLE="vim +PluginInstall +qall"
 
-mv ./.vim/ ~/
+#setting up vim environment
 mv ./.vimrc ~/
+mkdir ~/.vim/
+mv ./colors/ ~/.vim
+mv ./doc ~/.vim
 
 #downloading vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
