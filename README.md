@@ -13,9 +13,9 @@ You need to have several packages installed before running script
 
 After that, just run
 
-1. `git clone https://github.com/mrquorr/.vimgit.git`
+1. `git clone https://github.com/mrquorr/vimgit.git`
 
-2. `sudo ./install.sh`
+2. `./install.sh`
 
 ---
 
