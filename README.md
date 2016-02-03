@@ -1,11 +1,11 @@
 # vim
 You need to have several packages installed before running script
 
-1. vim `apt-get install vim`
+1. vim `apt-get install vim-gtk`
 
 2. git `apt-get install git`
 
-3. cmake `apt-get install build-install cmake`
+3. cmake `apt-get install cmake`
 
 4. python `apt-get install python-dev`
 
