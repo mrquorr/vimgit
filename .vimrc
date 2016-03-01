@@ -7,27 +7,37 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "
 "Vundle
-Bundle 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 "Pretty status line
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 "Git plugin
-Bundle 'tpope/vim-fugitive'
-"Ruby sintax
-Bundle 'vim-ruby/vim-ruby'
-"Erlang sintax
-Bundle 'jimenezrick/vimerl'
+Plugin 'tpope/vim-fugitive'
+"Ruby
+Plugin 'vim-ruby/vim-ruby'
+"Javascript
+Plugin 'pangloss/vim-javascript'
+"Meteor
+Plugin 'Slava/tern-meteor'
+"Erlang
+Plugin 'jimenezrick/vimerl'
+"C
+Plugin 'vim-scripts/c.vim'
+"R
+"Plugin 'jcfaria/Vim-R-plugin'
+"Bash
+"Latex
 "Easy surround
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 "Multiple cursors
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 "fuzzy finder
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 "Buffer explorer simplified
-Bundle 'jlanzarotta/bufexplorer'
+Plugin 'jlanzarotta/bufexplorer'
 "Nerdtree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 "Autocomplete, requires python to work
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "
 call vundle#end()
 

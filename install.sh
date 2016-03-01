@@ -5,9 +5,9 @@
 VUNDLE="vim +PluginInstall +qall"
 
 #setting up vim environment
-mv ./.vimrc ~/
+cp ./.vimrc ~/
 mkdir ~/.vim/
-mv ./colors/ ~/.vim
+cp ./colors/ ~/.vim
 
 #downloading vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
