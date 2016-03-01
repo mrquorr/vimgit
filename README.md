@@ -1,6 +1,8 @@
 # vim
 You need to have several packages installed before running script
 
+0. vim `apt-get install build-essential`
+
 1. vim `apt-get install vim-gtk`
 
 2. git `apt-get install git`
