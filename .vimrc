@@ -22,6 +22,7 @@ Plugin 'Slava/tern-meteor'
 Plugin 'jimenezrick/vimerl'
 "C
 Plugin 'vim-scripts/c.vim'
+"Python
 "R
 "Plugin 'jcfaria/Vim-R-plugin'
 "Bash
@@ -34,6 +35,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
 "Buffer explorer simplified
 Plugin 'jlanzarotta/bufexplorer'
+"Syntax checker
+Plugin 'scrooloose/syntastic'
 "Nerdtree
 Plugin 'scrooloose/nerdtree'
 "Autocomplete, requires python to work
@@ -67,6 +70,16 @@ endif
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 runtime macros/matchit.vim
 
+"" Folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
+"" Split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "" Buffer
 set hidden 			" change buffers without saving them

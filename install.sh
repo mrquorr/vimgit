@@ -6,8 +6,8 @@ VUNDLE="vim +PluginInstall +qall"
 
 #setting up vim environment
 cp ./.vimrc ~/
-mkdir ~/.vim/
-cp ./colors/ ~/.vim
+mkdir -p ~/.vim/colors
+cp ./colors/Chasing_Logic.vim ~/.vim/colors/Chasing_Logic.vim
 
 #downloading vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
