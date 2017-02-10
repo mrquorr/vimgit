@@ -1,8 +1,9 @@
 #! /bin/bash
 #script for automatically installing mrquorr's vim environment
 
+echo 'Wakatime api key: 71f22402-e902-453a-a8c2-bf4217f3070f'
 #variables
-VUNDLE="vim +PluginInstall +qall"
+#VUNDLE="vim +PluginInstall +qall"
 
 #setting up vim environment
 cp ./.vimrc ~/
@@ -13,8 +14,9 @@ cp ./colors/Chasing_Logic.vim ~/.vim/colors/Chasing_Logic.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #run a vundle install
-$VUNDLE
+vim +PluginInstall +qall
+#$VUNDLE
 
 #installing clang
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+#cd ~/.vim/bundle/YouCompleteMe
+#./install.py --clang-completer

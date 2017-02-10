@@ -11,15 +11,15 @@ Plugin 'VundleVim/Vundle.vim'
 "Pretty status line
 Plugin 'bling/vim-airline'
 "Git plugin
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 "Ruby
-Plugin 'vim-ruby/vim-ruby'
+"Plugin 'vim-ruby/vim-ruby'
 "Javascript
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
 "Meteor
-Plugin 'Slava/tern-meteor'
+"Plugin 'Slava/tern-meteor'
 "Erlang
-Plugin 'jimenezrick/vimerl'
+"Plugin 'jimenezrick/vimerl'
 "C
 Plugin 'vim-scripts/c.vim'
 "Python
@@ -40,7 +40,11 @@ Plugin 'scrooloose/syntastic'
 "Nerdtree
 Plugin 'scrooloose/nerdtree'
 "Autocomplete, requires python to work
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+"Acountability
+Plugin 'wakatime/vim-wakatime'
+"mapping pairs
+Plugin 'tpope/vim-unimpaired'
 "
 call vundle#end()
 
