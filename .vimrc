@@ -69,10 +69,15 @@ set title " Set the terminal's title.
 "colorscheme desert
 
 "" Highlight groups
-:set cursorline
-:highlight LineNr ctermfg=grey
-:highlight LineNr guifg=#050505
-:highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+set cursorline
+highlight LineNr ctermfg=grey
+highlight LineNr guifg=#050505
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 
 "" Whitespace
 match ExtraWhitespace /\s\+$/
@@ -84,10 +89,11 @@ set list listchars=tab:→\ ,trail:·
 
 "" Settings
 set autoindent
-set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
-set expandtab                   " use spaces, not tabs (optional)
-set backspace=indent,eol,start  " backspace through everything in insert mode
+set nowrap                             " don't wrap lines
+set expandtab                          " change tab to space
+set tabstop=2                          " change tab and indentation to 2 spaces
+set shiftwidth=2                       " change indentation to 2 spaces
+set backspace=indent,eol,start         " backspace through everything in insert mode
 set noesckeys " Get rid of the delay when hitting esc
 set ttimeout " Same as above
 set ttimeoutlen=1
@@ -106,7 +112,7 @@ nmap K kkkkk
 nmap QQ :q<CR>
 nmap WQ :wq<CR>
 nmap WW :w<CR>
-nmap <Tabl> %
+"nmap <Tabl> %
 
 "" Split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -163,77 +169,3 @@ nmap <Esc>b :BufMRUNext<CR>
 map <Tab> :BufMRUNext<CR>
 map <S-Tab> :BufMRUPrev<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GUI configuration
-"""
-if has("gui_running")				" GUI Vim settings
-    set guioptions=agimtTr                      " Show 'Menu' + 'Toolbar' + 'Right Scrollbar'
-    ":source ~/.vim/bundle/vim-colorschemes/Chasing_Logic.vim
-    colorscheme Chasing_Logic		        " Set the color scheme
-    set background=dark
-    "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9  " Set the nice Powerline font so Airline could make use of it
-    set lines=999 columns=999
-endif
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Cvim Configuration
-"""
-"" compilation
-nmap cb :! ./script
-"" comments
-nmap cc \cc
-	"code to comment
-nmap co \co
-	"comment to code
-"" statements
-map cw \swh
-	"while block
-map cif \sif
-	"if block
-map cel \sel
-	"else block
-map csw \ss
-	"switch
-map cscs \sc
-	"case
-"" idioms
-map cf \i0
-	"for starting at 0
-map cfn \in
-	"for starting at n
-map cpr \ipr
-	"printf
-map csc \isc
-	"scanf
-map cm \im
-	"main
-map cfu \if
-	"function
-"" preprocessor
-map ci \pg
-	"include global (#include<...>)
-map cil \pl
-	"include local (#include"...")
-"" c++
-map cstd \+uns
-map class \+c
-	"class
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Rails Configuration
-"""
-"" Econtroller
-nmap Renv :Eenvironment<CR>
-nmap Renv :Econtroller
-nmap Rjsc :Ejavascript
-nmap Rmod :Emodel
-nmap Rsch :Eschema<CR>
-"" Rake
-nmap Rak :Rake
-"" Script
-nmap Rser :Rserver<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-:highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
