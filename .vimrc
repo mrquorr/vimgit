@@ -21,16 +21,16 @@ Plugin 'bling/vim-airline'
 "Erlang
 "Plugin 'jimenezrick/vimerl'
 "C
-Plugin 'vim-scripts/c.vim'
+"Plugin 'vim-scripts/c.vim'
 "Python
 "R
 "Plugin 'jcfaria/Vim-R-plugin'
 "Bash
 "Latex
 "Easy surround
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 "Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 "fuzzy finder
 Plugin 'kien/ctrlp.vim'
 "Buffer explorer simplified
@@ -42,20 +42,16 @@ Plugin 'scrooloose/nerdtree'
 "Autocomplete, requires python to work
 "Plugin 'Valloric/YouCompleteMe'
 "Acountability
-Plugin 'wakatime/vim-wakatime'
+"Plugin 'wakatime/vim-wakatime'
 "mapping pairs
-Plugin 'tpope/vim-unimpaired'
+"Plugin 'tpope/vim-unimpaired'
 "
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible                " choose no compatibility with legacy vi
-" Required Vundle setup
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 
-syntax on
-syntax enable
+"syntax on
+"syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin on
@@ -105,8 +101,8 @@ set backupdir=$HOME/.vim/tmp
 
 "" Mappings
 nnoremap <F4> :set hlsearch!<CR>
-nnoremap + maO<esc>`a
-nnoremap - mao<esc>`a
+"nnoremap + maO<esc>`a
+"nnoremap - mao<esc>`a
 nmap J jjjjj
 nmap K kkkkk
 nmap QQ :q<CR>
@@ -131,6 +127,19 @@ set undodir=~/.vim/undodir
 set undofile
 "set undolevels = 1000       " max number of changes that can be undone
 "set undoreload = 10000      " max number lines to save for undo on a buffer reload
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic configuration
+"""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline configuration
