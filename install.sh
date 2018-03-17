@@ -1,7 +1,7 @@
 #! /bin/bash
 #script for automatically installing mrquorr's vim environment
 
-echo 'Wakatime api key: 71f22402-e902-453a-a8c2-bf4217f3070f'
+#echo 'Wakatime api key: 71f22402-e902-453a-a8c2-bf4217f3070f'
 #variables
 #VUNDLE="vim +PluginInstall +qall"
 
