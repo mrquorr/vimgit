@@ -1,0 +1,9 @@
+:cd $HOME\workspace\notes\
+:Explore
+
+nmap dtag :put =strftime('%Y/%m/%d')<CR>
+nmap dsep A - (<ESC>
+nmap ftag "=getreg('%:t')<CR>p
+nmap ctag A):<ESC>
+
+nmap ttag dtagdsepftagctagA 
