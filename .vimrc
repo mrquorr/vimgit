@@ -48,11 +48,11 @@ set tabstop=2                          " change tab and indentation to 2 spaces
 set shiftwidth=2                       " change indentation to 2 spaces
 set backspace=indent,eol,start         " backspace through everything in insert mode
 set noesckeys " Get rid of the delay when hitting esc
-set ttimeout " Same as above
+set ttimeout
 set ttimeoutlen=1
-set noswapfile " I dont like backups nor swap files
-set nobackup " Don't make a backup before overwriting a file.
-set nowritebackup " And again.
+set noswapfile
+set nobackup
+set nowritebackup
 set directory=$HOME/.vim/tmp " Keep swap files in one location
 set backupdir=$HOME/.vim/tmp
 
@@ -61,6 +61,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"" F toggles
+nnoremap <F4> :set hlsearch!<CR>
+nnoremap <F5> :set paste!<CR>
+nnoremap <F6> :set number!<CR>
 
 "" Searching
 set hlsearch           " highlight matches
@@ -75,8 +80,13 @@ set undofile
 "set undoreload = 10000      " max number lines to save for undo on a buffer reload
 
 "" Quick edit
-nnoremap edit_vim :e $HOME/_vimrc<CR>
-nnoremap edit_notes :e $HOME/_noterc<CR>
+nnoremap edit_vim :e $HOME/.vimrc<CR>
 
-"" Load noterc
-nnoremap snot :source $HOME/_noterc<CR>
+"" Load work
+nnoremap edit_wok :e $HOME/.wokrc<CR>
+nnoremap wok :source $HOME/.workrc<CR>
+
+augroup nonvim
+   au!
+   au BufRead *.png,*.jpg,*.pdf,*.gif,*.xls*,*.ppt*,*.doc*,*.rtf sil exe "!open " . shellescape(expand("%:p")) | bd | let &ft=&ft
+augroup end
