@@ -63,9 +63,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "" F toggles
-nnoremap <F4> :set hlsearch!<CR>
-nnoremap <F5> :set paste!<CR>
-nnoremap <F6> :set number!<CR>
+nnoremap <Leader>hlsearch :set hlsearch!<CR>
+nnoremap <Leader>paste :set paste!<CR>
+nnoremap <Leader>num :set number!<CR>
 
 "" Searching
 set hlsearch           " highlight matches
@@ -80,11 +80,10 @@ set undofile
 "set undoreload = 10000      " max number lines to save for undo on a buffer reload
 
 "" Quick edit
-nnoremap edit_vim :e $HOME/.vimrc<CR>
+nnoremap <Leader>d :e $HOME/.vimrc<CR>
 
-"" Load work
-nnoremap edit_wok :e $HOME/.wokrc<CR>
-nnoremap wok :source $HOME/.workrc<CR>
+"" File tree structure navigation
+nnoremap <Leader>e :Explore $HOME/Documents/workspace/notes<CR>
 
 augroup nonvim
    au!
